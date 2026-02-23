@@ -1,0 +1,30 @@
+# WITT configuration (Swin Transformer)
+model_name: witt
+model:
+  name: witt
+  patch_size: 2
+  embed_dim: 128
+  channel_dim: 256
+  depths: [2, 2]
+  num_heads: [4, 8]
+  window_size: 8
+
+channel_type: awgn
+snr_train: 10.0
+random_snr: true       # SNR-adaptive via ModNet
+
+batch_size: 64         # Smaller batch for larger model
+lr: 5.0e-4
+epochs: 300
+scheduler: cosine
+weight_decay: 1.0e-4
+
+dataset: cifar10
+data_root: ./data_cache
+
+snr_range: [-2, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+eval_metrics: [psnr, ssim]
+
+log_dir: ./runs
+checkpoint_dir: ./checkpoints
+save_every: 20

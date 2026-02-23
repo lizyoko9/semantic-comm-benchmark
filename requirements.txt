@@ -1,0 +1,10 @@
+torch>=2.0
+torchvision>=0.15
+pyyaml>=6.0
+lpips>=0.1.4
+numpy>=1.24
+scipy>=1.10
+pillow>=9.4
+tensorboard>=2.13
+tqdm>=4.65
+matplotlib>=3.7

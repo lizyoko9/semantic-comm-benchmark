@@ -1,0 +1,25 @@
+# DeepJSCC configuration
+model_name: deepjscc
+model:
+  name: deepjscc
+  c_out: 16          # bandwidth ratio ≈ 16*8*8 / (3*32*32) ≈ 1/3
+
+channel_type: awgn
+snr_train: 10.0
+random_snr: false
+
+batch_size: 128
+lr: 1.0e-3
+epochs: 200
+scheduler: cosine
+weight_decay: 0.0
+
+dataset: cifar10
+data_root: ./data_cache
+
+snr_range: [-2, 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20]
+eval_metrics: [psnr, ssim]
+
+log_dir: ./runs
+checkpoint_dir: ./checkpoints
+save_every: 20
