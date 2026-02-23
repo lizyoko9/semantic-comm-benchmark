@@ -1,10 +1,10 @@
-# SemComBench
+# semantic-comm-benchmark
 
 A PyTorch benchmark framework for comparing deep learning-based semantic communication models against traditional separate source-channel coding baselines.
 
 ## Overview
 
-SemComBench reproduces the baseline comparisons commonly seen in semantic communication papers, providing a unified evaluation framework with consistent datasets, channel models, and metrics.
+semantic-comm-benchmark reproduces the baseline comparisons commonly seen in semantic communication papers, providing a unified evaluation framework with consistent datasets, channel models, and metrics.
 
 ### Supported Models
 
@@ -27,7 +27,7 @@ SemComBench reproduces the baseline comparisons commonly seen in semantic commun
 ## Project Structure
 
 ```
-SemComBench/
+semantic-comm-benchmark/
 ├── channel/              # Channel models (AWGN, Rayleigh, Rician)
 ├── data/                 # Dataset loaders (CIFAR-10, Kodak24, Europarl)
 ├── losses/               # Loss functions (MSE, rate-distortion, LPIPS, CE)
@@ -51,8 +51,8 @@ SemComBench/
 ### Installation
 
 ```bash
-git clone https://github.com/<your-username>/SemComBench.git
-cd SemComBench
+git clone https://github.com/lizyoko9/semantic-comm-benchmark.git
+cd semantic-comm-benchmark
 pip install -r requirements.txt
 ```
 
